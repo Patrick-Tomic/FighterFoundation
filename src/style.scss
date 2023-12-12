@@ -1,0 +1,15 @@
+header{
+    display: flex;
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h3{
+            background-color: gray;
+            font-size: 26px;
+            color: white;
+            padding: 10px;
+            border-radius: 25px;
+        }
+    }
+}
