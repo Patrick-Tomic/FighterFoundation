@@ -1,5 +1,5 @@
 import './style.scss'
-const logo = './images/logo.jpg'
+import logo = require('./logo.jpg')
 const header: HTMLElement | any = document.querySelector('header')
 const img = document.createElement('img')
 img.src = logo

@@ -1,14 +1,16 @@
 {
     "compilerOptions": {
-        "lib": ["ES2015", "DOM"],
+        "lib": ["ES2023", "DOM"],
         "module": "CommonJS",
-        "outDir": "dist",
+        "outDir": "./dist",
         "sourceMap": true,
         "strict": true,
-        "target": "ES2015",
-        "typeRoots": ["@types"]
+        "noImplicitAny": false,
+        "typeRoots": ["node_modules/@types", "src/types"]
     },
     "include": [
-        "./src/**/*.tsx", "src"
-           ]
+        "src",
+        "./eslintrc.js",
+        "./webpack.config.js",
+           ],
 }
