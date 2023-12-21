@@ -19,11 +19,7 @@ tabs.forEach((tab) => {
   const div = document.createElement('div')
   const li = document.createElement('li')
   li.classList.add(tab)
-  if (tab === 'About' || tab === 'Contact') {
-    li.innerHTML = tab + ' Us'
-  } else {
-    li.innerHTML = tab
-  }
+  li.innerHTML = tab
   div.appendChild(li)
   if (tab === 'About') {
     const li = document.createElement('li')
@@ -48,7 +44,6 @@ tabs.forEach((tab) => {
           li.innerHTML = 'Patient Resources'
           count++
           li.classList.add('hidden')
-          
           div.appendChild(li)
           break
         case 1:
