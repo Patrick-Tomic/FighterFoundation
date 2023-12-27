@@ -1,6 +1,6 @@
-import mural from './mural.jpg'
-import race from './race.jpg'
-import { hope } from './hope.jpeg'
+import mural = require('./imgs/mural.jpg')
+import race = require('./imgs/race.jpg')
+import hope = require('./imgs/hope.jpeg')
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export default function buildImageSlider () {
   const heading = [mural, race, hope]
@@ -16,8 +16,8 @@ export default function buildImageSlider () {
   let count = 0
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const interval = setInterval(() => {
-    let vw = 26
-    if (count === -3) {
+    let vw = 80
+    if (count === -2) {
       count = 0
       vw = vw * count
       slider.style.transition = 'none'

@@ -83,12 +83,26 @@ body{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2fr 1fr 1fr;
     .sliderWrap{
-        border: solid 1px red;
-        width: 80%;
-        height: 40%;
-        grid-column: 1/3;
-        grid-row: 1/2;
-        
+        z-index: 1;
+      
+       height: 120vh;
+        width: 80vw;
+         border: solid 1px red;
+         grid-column: 1/3;
+        overflow: hidden;
+        .imgSlider{
+            margin: 0;
+            z-index: 5;
+            display: flex;
+            width: 240vw;
+            
+            transition: transform 1s ease-in-out;
+            transform: translateX(0);
+            img{
+                height: auto;
+                width: 80vw;
+            }
+        }
     }
     div{
          ul{

@@ -1,5 +1,5 @@
 import './style.scss'
-import logo = require('./logo.jpg')
+import logo = require('./imgs/logo.jpg')
 import buildHome from './buildHome'
 const header: HTMLElement | any = document.querySelector('header')
 const img = document.createElement('img')
