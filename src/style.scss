@@ -6,74 +6,123 @@ $gold: 		#FFBF00;
 }
 body{
     width: 100%;
-}
-header{
-    position: sticky;
-    top: 0;
-    box-shadow: 0px 5px 5px $gold;
-    height: 250px;
-   width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    h1{
-        margin-top: 5vh;
-        margin-left:22vw ;
-        width: 25vw;
-        height: 10vh;
-        color: $grey;
-
-    }
-    nav{
-        width: 70vw;
-        max-height: 10vh ;
-        min-height: 10vh;
-        margin-left: 5vw;
+    header{
+        z-index: 2;
+        position: sticky;
+        top: 0;
+        box-shadow: 0px 5px 5px $gold;
+        height: 250px;
+       width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        background-color: white;
+        h1{
+            margin-top: 5vh;
+            margin-left:22vw ;
+            width: 25vw;
+            height: 10vh;
+            color: $grey;
+    
+        }
+        nav{
+            width: 70vw;
+            max-height: 10vh ;
+            min-height: 10vh;
+            margin-left: 5vw;
+            margin-top: 1vh;
+            display: flex;
+            div{
+                li{
+                    border: solid 1px black;
+                    padding: 10px 40px;
+                    text-align: center;
+                    list-style: none;
+                    font-weight: bold;
+                    font-size: 20px;
+                    color: white;
+                    background-color: $grey;
+                }
+                .hidden{
+                    display: none;
+                }
+                li:hover{
+                    cursor: pointer;
+                    background-color:$gold ;
+                    color: black;
+    
+                }
+            }
+            div:hover{
+                .hidden{
+                    display: block;
+                }
+            }
+        }
+             
+    img{
+       width: 20vw;
         margin-top: 1vh;
-        display: flex;
-        div{
-            li{
-                border: solid 1px black;
-                padding: 10px 40px;
-                text-align: center;
-                list-style: none;
-                font-weight: bold;
-                font-size: 20px;
+        margin-left: 2vw;
+    }     
+            .imgHead{
+                background-color: gray;
+                font-size: 26px;
                 color: white;
-                background-color: $grey;
+                height: 4vh;
+                width: 20vw;
+                margin-left: 36px;
+               text-align: center;
+                border-radius: 25px;
             }
-            .hidden{
-                display: none;
-            }
-            li:hover{
-                cursor: pointer;
-                background-color:$gold ;
-                color: black;
+        }
+ main{
+     
+    padding: 3vw 3vh;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
+    .sliderWrap{
+        border: solid 1px red;
+        width: 80%;
+        height: 40%;
+        grid-column: 1/3;
+        grid-row: 1/2;
+        
+    }
+    div{
+         ul{
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+            margin-left: 5vw;
+            
+            li {
+                color: white;
+                font-size: 19px;
 
             }
-        }
-        div:hover{
-            .hidden{
-                display: block;
-            }
-        }
-    }
-         
-img{
-   width: 20vw;
-    margin-top: 1vh;
-    margin-left: 2vw;
-}     
-        .imgHead{
-            background-color: gray;
-            font-size: 26px;
+         }
+        padding: 10px;
+        h1{
+            
             color: white;
-            height: 4vh;
-            width: 20vw;
-            margin-left: 36px;
-           text-align: center;
-            border-radius: 25px;
+            text-align: center;
         }
+        p{
+          
+            color: white;
+            font-size: 20px;
+            line-height: 30px;
+        }
+        background-color: #808080;
+        border-radius: 20px;
+        margin-left: 5vw;
+        border: solid 1px gray;
+        width: 30vw;
     }
+ }       
+}
 @media(max-width: 450px){
     header{
         height: 150px;
