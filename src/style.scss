@@ -1,5 +1,6 @@
 $grey: #808080;
 $gold: 		#FFBF00;
+$almond: #EADDCA;
 *{
     margin: 0;
     padding: 0;
@@ -76,35 +77,48 @@ body{
             }
         }
  main{
-     
+     background-color: $almond;
     padding: 3vw 3vh;
     z-index: 1;
+   
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-rows: 1fr .5fr .5fr .5fr;
+        
     .sliderWrap{
         z-index: 1;
-      
-       height: 120vh;
+       border: none;
+       border-radius: 0;
+       grid-column: 1/3;
+         background-color:$almond;
+         min-height: 70vh;
         width: 80vw;
-         border: solid 1px red;
-         grid-column: 1/3;
+        
         overflow: hidden;
         .imgSlider{
-            margin: 0;
+          background-color:$almond;
             z-index: 5;
+             border: none;            
             display: flex;
-            width: 240vw;
+            margin: 0;
             
             transition: transform 1s ease-in-out;
             transform: translateX(0);
             img{
-                height: auto;
-                width: 80vw;
+                border-radius: 0;
+                margin: 0;
+                min-width: 89vw;
+                height: 60vh;
             }
         }
     }
+    .aboutMichelle{ 
+        grid-row: 2/4;
+        min-height: 80vh;
+    }
     div{
+        height: 20vh;
+        max-height: 40vh;
          ul{
            display: flex;
            flex-direction: column;
