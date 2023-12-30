@@ -33,4 +33,73 @@ export default function buildHome () {
   FFObjectives.appendChild(FFObjHead)
   FFObjectives.appendChild(FFPara)
   main.appendChild(FFObjectives)
+
+  const GBMDiv = document.createElement('div')
+  const GBMHeader = document.createElement('h1')
+  GBMHeader.innerHTML = "What is Glioblastoma?"
+  const explainGBM = document.createElement('p')
+  explainGBM.innerHTML = 'Glioblastoma(GBM) are malignant grade 4 tumors located in the brain. Glioblastomas are diffusely infiltrative and invade nearby regions of the brain. THey can sometimes spread to the opposite side of the brain through the corpus callosum or the ventricular system. GBM is most commonly found in the frontal lobe, over 25% of the time.<br><br> Glioblastoma arise de novo, meaning that they begin as a grade 4 tumor with no evidence of a lower-grade precursor. Tendency of de novo tumors are quite aggressive, and are more common in patients 60 years of age or older, young patients may be affected'
+  GBMDiv.appendChild(GBMHeader)
+  GBMDiv.appendChild(explainGBM)
+  const GBMChild = document.createElement('div')
+  const symptoms = document.createElement('ul')
+  let count = 0
+  while(count<8){
+    const li = document.createElement('li')
+    switch(count){
+      case 0:
+        li.innerHTML = 'Seizures'
+        break
+      case 1:
+        li.innerHTML = 'Severe Headaches'
+        break
+      case 2:
+        li.innerHTML = 'Memory and language problems'
+        break
+      case 3:
+        li.innerHTML = 'Changes in personality and behavior'
+        break
+      case 4:
+        li.innerHTML = 'Muscle weakness and paralysis'
+        break
+      case 5:
+        li.innerHTML = 'Fatigue'
+        break
+      case 6:
+        li.innerHTML = 'Issues with coordination'
+         break
+      case 3:
+        li.innerHTML = 'Speech, hearing, and vision problems'
+        break
+    }
+    symptoms.appendChild(li)
+    count++
+  }
+  GBMChild.appendChild(symptoms)
+  const treatment = document.createElement('div')
+  const p = document.createElement('p')
+  p.innerHTML= 'Glioblastomas are difficult to treat for the reasons of:'
+  treatment.appendChild(p)
+  const options = document.createElement('ul')
+  count = 0
+  while(count<3) {
+    const li = document.createElement('li')
+    switch(count){
+      case 0:
+        li.innerHTML = 'They are a fasting growing form of tumor that invades nearby brain tissue'
+        break
+      case 1:
+        li.innerHTML = 'The blood-brain barrier prevents vertain treatments from being able to reavch the tumor'
+        break
+      case 2:
+        li.innerHTML = 'They have many different types of tumor cells and can change over time'
+        break
+    }
+    options.appendChild(li)
+    count++
+  }
+  treatment.appendChild(options)
+  GBMChild.appendChild(treatment)
+  GBMDiv.appendChild(GBMChild)
+  main.appendChild(GBMDiv)
 }
