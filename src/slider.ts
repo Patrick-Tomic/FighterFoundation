@@ -12,12 +12,15 @@ export default function buildImageSlider () {
   for (let i = 0; i < heading.length; i++) {
     const image = document.createElement('img')
     image.src = heading[i]
+    if(image.src === hope || image.src === quote){
+      image.classList.add('hopeImage')
+    }
     slider.appendChild(image)
   }
   let count = 0
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const interval = setInterval(() => {
-    let vw = 93
+    let vw = 68
     if (count === -3) {
       count = 0
       vw = vw * count

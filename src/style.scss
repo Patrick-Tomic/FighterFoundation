@@ -88,14 +88,16 @@ body{
     .sliderWrap{
         z-index: 1;
        border: none;
+       margin-left:15vw;
        border-radius: 0;
        grid-column: 1/3;
          background-color:$almond;
          min-height: 70vh;
-        width: 80vw;
+        min-width: 64vw;
         
         overflow: hidden;
         .imgSlider{
+
           background-color:$almond;
             z-index: 5;
              border: none;            
@@ -106,18 +108,24 @@ body{
             transform: translateX(0);
             img{
                 border-radius: 0;
-                margin: 0;
-                min-width: 89vw;
+                
+                width: 66vw;
+                min-width: 66vw;
                 height: 60vh;
+            }
+            .hopeImage{
+                min-width: 68vw;
             }
         }
     }
     .aboutMichelle{ 
         grid-row: 2/4;
-        min-height: 80vh;
+        max-height: 135vh;
+        height: 135vh;
+        font-size: 16px;
     }
     div{
-        height: 20vh;
+        height: 35vh;
         max-height: 40vh;
          ul{
            display: flex;
@@ -127,7 +135,7 @@ body{
             
             li {
                 color: white;
-                font-size: 19px;
+                font-size: 18px;
 
             }
          }
